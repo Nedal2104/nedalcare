@@ -2,30 +2,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NedalCare</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="scripts/language.js" defer></script>
+  <script src="scripts/assistant.js" defer></script>
 </head>
 <body>
   <header>
-    <img src="assets/logo.png" alt="Logo" class="logo">
-    <h1>Welcome to NedalCare</h1>
+    <img src="assets/logo.png" alt="NedalCare Logo" class="logo" />
+    <h1 id="site-title">Welcome to NedalCare</h1>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="chat.html">Chat</a></li>
         <li><a href="medications.html">Medications</a></li>
+        <li><a href="chat.html">Chat</a></li>
         <li><a href="profile.html">Profile</a></li>
+        <li><select id="language-selector">
+          <option value="en">English</option>
+          <option value="he">עברית</option>
+        </select></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section>
-      <h2>Your trusted medical platform</h2>
-      <p>Everything you need to manage your clinic efficiently.</p>
+    <section class="hero">
+      <h2 id="hero-text">Your trusted medical companion.</h2>
     </section>
+    <div id="assistant-popup">
+      <img src="assets/assistant.png" alt="Assistant" />
+      <p id="assistant-text">Hello! I'm here to help you navigate.</p>
+    </div>
   </main>
   <footer>
     <p>© 2025 NedalCare</p>
